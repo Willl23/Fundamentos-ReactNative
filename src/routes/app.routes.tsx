@@ -1,5 +1,8 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+} from '@react-navigation/stack';
 
 import { Image } from 'react-native';
 
@@ -17,6 +20,7 @@ const AppRoutes: React.FC = () => (
     screenOptions={{
       headerShown: true,
       cardStyle: { backgroundColor: '#EBEEF8' },
+      cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
     }}
     initialRouteName="Dashboard"
   >
